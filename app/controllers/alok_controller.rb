@@ -20,7 +20,7 @@ class AlokController < ApplicationController
     db = mongo_client.db("mydb")
   	coll = db.collection("testCollection")
   	coll = db["testCollection"]
-    retrieve = coll.find();
+    retrieve = coll.find({:id => params[:i]});
 
   end
 end

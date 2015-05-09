@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  get 'alok/index'
-  root 'alok#index'
+  get 'alok/index' => 'alok#index'
+  get 'alok/getDbData/:i' => 'alok#getDbData'
+  root 'alok#getDbData'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
